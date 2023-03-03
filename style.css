@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.calci {
+  height: 120vh;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+}
+
+.calci h1 {
+  text-align: center;
+  font-family: 'Lobster';
+  letter-spacing: 2.1px;
+  font-size: 50px;
+  margin: 0px;
+  color: rgba(35, 244, 132, 0.841);
+  text-decoration-line:none;
+}
+
+.calculator-grid {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7026ef;
+  border: 1px solid rgb(158, 232, 9);
+  border-radius: 25px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 70vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border-style: none;
+  outline: none;
+  background-color: rgba(153, 41, 21, 0.6);
+  transition: all .45s;
+  margin: 5px;
+  border-radius: 45px;
+}
+
+.calculator-grid>button:hover {
+  background-color: rgba(91, 241, 96, 0.9);
+  color: #fff;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+#equal {
+  background: rgba(243, 140, 89, 0.905);
+}
+
+#equal:hover {
+  background-color: rgba(237, 68, 42, 0.968);
+  color: #fff;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(114, 179, 106, 0.94);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 8px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 25px;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.832);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2rem;
+}
